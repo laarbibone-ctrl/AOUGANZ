@@ -147,6 +147,57 @@
         /* هذا الكلاس يعكس ترتيب العناصر داخل الحاوية */
          .reverse {
            flex-direction: row-reverse;
+             /* التنسيقات الخاصة بالشاشات الأصغر من 768 بكسل (الهواتف) */
+@media (max-width: 768px) {
+    
+    /* 1. ضبط القائمة العلوية */
+    nav ul {
+        flex-direction: column; /* جعل الروابط تحت بعضها */
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* 2. تحويل الأقسام لتصبح الصورة فوق النص */
+    .service-container, 
+    .service-container.reverse {
+        flex-direction: column !important; /* إلغاء التنوع البصري في الهاتف لسهولة القراءة */
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* 3. ضبط حجم الصور لتناسب عرض الشاشة */
+    .service-image img {
+        width: 100% !important;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .service-text {
+        padding: 0;
+    }
+
+    /* 4. تعديل زر فيسبوك ليكون بارزاً في الهاتف */
+    .fb-button {
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    /* 5. ضبط تذييل الصفحة (Footer) */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}
 }
     </style>
 </head>
@@ -250,7 +301,7 @@
                 </p>
             </div>
             <div class="service-image">
-                <img src="almogar.jpeg" alt="تنظيم الفعاليات">
+                <img src="l7aj.jpng" alt="تنظيم الفعاليات">
             </div>
         </div>
     </section>
