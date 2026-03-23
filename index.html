@@ -231,7 +231,63 @@
         justify-content: center;
         gap: 10px;
     }
-}    
+}   
+        جميع/* تنسيقات خاصة للهواتف فقط */
+@media (max-width: 768px) {
+    
+    /* 1. ضبط الشريط العلوي (الهيدر) */
+    header {
+        height: auto !important; /* السماح للهيدر بالتمدد حسب المحتوى */
+        flex-direction: column !important; /* ترتيب العناصر فوق بعضها */
+        padding: 15px 10px !important;
+        gap: 10px;
+    }
+
+    /* 2. تصغير حجم الخط في الهيدر */
+    .logo-section span {
+        font-size: 14px !important; /* تصغير اسم الاتحاد */
+    }
+
+    .logo-img {
+        height: 45px !important; /* تصغير اللوجو قليلاً */
+        width: 45px !important;
+    }
+
+    /* 3. ضبط القائمة العلوية */
+    nav ul {
+        gap: 8px !important;
+        flex-wrap: wrap; /* السماح للروابط بالنزول لسطر جديد إذا ضاق المكان */
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 13px !important; /* تصغير حجم روابط القائمة */
+    }
+
+    /* 4. تصغير نصوص الأقسام (المقدمة والخدمات) */
+    .hero-content h1 {
+        font-size: 1.5rem !important; /* تصغير عنوان المقدمة الرئيسي */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem !important; /* تصغير نص المقدمة */
+    }
+
+    .service-text h2 {
+        font-size: 1.3rem !important; /* تصغير عناوين الخدمات */
+    }
+
+    .service-text p {
+        font-size: 0.85rem !important; /* تصغير فقرات الخدمات */
+        padding: 0 10px;
+    }
+
+    /* 5. زر فيسبوك في الهاتف */
+    .fb-button {
+        font-size: 12px !important;
+        padding: 4px 10px !important;
+    }
+}
     </style>
 </head>
 <body>
