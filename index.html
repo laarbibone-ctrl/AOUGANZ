@@ -199,6 +199,39 @@
     }
 }
 }
+    /* توسيط النصوص وتصغير الصور */
+.service-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image img {
+    max-width: 80% !important; /* لضمان عدم ضخامة الصور */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* تحسين مظهر القائمة العلوية للهاتف */
+@media (max-width: 768px) {
+    .service-container, .service-container.reverse {
+        flex-direction: column !important; /* الصورة فوق النص في الهاتف */
+        text-align: center;
+    }
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}    
     </style>
 </head>
 <body>
