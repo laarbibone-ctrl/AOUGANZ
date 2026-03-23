@@ -287,7 +287,59 @@
         font-size: 12px !important;
         padding: 4px 10px !important;
     }
-}
+    
+   /* تحسينات خاصة بوضع الهاتف فقط */
+@media (max-width: 768px) {
+    
+    /* 1. جعل الشريط العلوي (Header) مرناً ومنظماً */
+    header {
+        height: auto !important;
+        flex-direction: column !important; /* ترتيب العناصر عمودياً */
+        padding: 10px !important;
+        gap: 8px !important;
+        background-color: #0d4a6b !important; /* توحيد اللون */
+    }
+
+    /* 2. تصغير حجم نصوص القائمة لتناسب العرض */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px !important;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 12px !important; /* تصغير الخط في القائمة */
+    }
+
+    /* 3. ضبط اسم الاتحاد واللوجو */
+    .logo-section {
+        order: -1; /* جعل اللوجو والاسم في الأعلى دائماً */
+    }
+
+    .logo-section span {
+        font-size: 14px !important;
+    }
+
+    /* 4. تصغير نصوص المقدمة والخدمات */
+    .hero-content h1, h1, h2 {
+        font-size: 1.4rem !important; /* تصغير العناوين الكبيرة */
+        text-align: center;
+    }
+
+    .hero-content p, p {
+        font-size: 0.9rem !important; /* تصغير الفقرات */
+        line-height: 1.6 !important;
+        text-align: center;
+    }
+
+    /* 5. جعل زر فيسبوك مناسباً للمس بالإصبع */
+    .fb-button {
+        font-size: 11px !important;
+        padding: 5px 12px !important;
+        margin-top: 5px;
+    }
+}     
     </style>
 </head>
 <body>
