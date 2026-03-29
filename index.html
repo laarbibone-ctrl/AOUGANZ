@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اتحاد تانفاليت لجمعيات أوكنز - الصفحة الرسمية</title>
     
-    <meta name="description" content="الموقع الرسمي لاتحاد تانفاليت لجمعيات أوكنز، يعنى بالتنمية المجالية، التدريب، وتنشيط الفعاليات الثقافية والاجتماعية بالمنطقة.">
-    <meta name="keywords" content="اتحاد تانفاليت, جمعيات أوكنز, تنمية أوكنز, الموكار أوكنز, العمل الجمعوي">
-    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -19,204 +16,207 @@
             --light-bg: #f4f7f9;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--light-bg);
-            color: #333;
-            line-height: 1.6;
-        }
+        body { margin: 0; padding: 0; font-family: 'Cairo', sans-serif; background-color: var(--light-bg); color: #333; line-height: 1.6; }
 
         /* شريط المعلومات العلوي */
-        .top-info {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 8px 50px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-        }
+        .top-info { background-color: var(--accent-color); color: white; padding: 8px 50px; display: flex; justify-content: space-between; font-size: 14px; }
 
         /* الهيدر */
         header {
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-            color: white;
-            padding: 10px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            color: white; padding: 10px 50px; display: flex; justify-content: space-between; align-items: center;
+            height: 80px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
         }
 
         .logo-section { display: flex; align-items: center; gap: 15px; }
         .logo-img { height: 60px; width: 60px; border-radius: 50%; background: white; object-fit: cover; border: 2px solid #fff; }
 
-        nav { display: flex; align-items: center; gap: 20px; }
         nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
         nav ul li a:hover { color: #ffd700; }
 
-        .fb-button {
-            border: 1px solid #fff;
-            padding: 5px 15px;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+        .fb-button { border: 1px solid #fff; padding: 5px 15px; color: #fff; text-decoration: none; border-radius: 5px; transition: 0.3s; }
         .fb-button:hover { background: #fff; color: var(--primary-color); }
 
-        /* قسم البطولة (Hero) */
-        .hero-section {
-            position: relative;
-            height: 80vh;
-            background: url('laarbi-bg.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+        /* الأقسام */
+        .hero-section { position: relative; height: 70vh; background: url('laarbi-bg.jpg') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
+        .hero-section::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5); }
+        .hero-content { position: relative; z-index: 2; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); max-width: 800px; margin: 0 20px; }
 
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 800px;
-            margin: 0 20px;
-        }
-
-        /* أقسام الخدمات */
-        .services-section { padding: 60px 20px; background: #fff; }
-        .services-section:nth-child(even) { background: #f9f9f9; }
-        
-        .service-container { 
-            display: flex; 
-            align-items: center; 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            gap: 50px; 
-        }
+        .services-section { padding: 60px 20px; background: #fff; border-bottom: 1px solid #eee; }
+        .service-container { display: flex; align-items: center; max-width: 1100px; margin: 0 auto; gap: 50px; }
         .reverse { flex-direction: row-reverse; }
-        
-        .service-text { flex: 1; text-align: right; }
-        .service-text h2 { color: var(--secondary-color); font-size: 2rem; margin-bottom: 15px; }
-        
+        .service-text { flex: 1; }
         .service-image { flex: 1; }
-        .service-image img { 
-            width: 100%; 
-            max-width: 450px; 
-            border-radius: 15px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            object-fit: cover;
-        }
+        .service-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        /* الفوتر */
-        .main-footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 0 20px;
-            direction: rtl;
-        }
+        /* الأخبار */
+        #news-page { display: none; padding: 40px 20px; } /* مخفي افتراضياً */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .news-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .news-body { padding: 20px; }
+        .news-badge { background: var(--secondary-color); color: white; padding: 4px 10px; border-radius: 5px; font-size: 12px; }
+        .news-title { color: var(--primary-color); margin: 15px 0; }
+        .news-text { font-size: 0.9rem; color: #555; text-align: justify; }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        footer { background: var(--primary-color); color: white; padding: 40px 20px; text-align: center; }
+        .footer-content { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+        .footer-section { flex: 1; min-width: 250px; margin: 20px; }
+        .bank-account { background: rgba(255,255,255,0.1); padding: 10px; border-right: 4px solid #ffd700; margin-top: 10px; }
 
-        .footer-section { flex: 1; min-width: 250px; margin-bottom: 20px; }
-        .footer-section h3 { border-bottom: 2px solid #f9f9f9; padding-bottom: 10px; margin-bottom: 15px; }
-
-        .bank-account {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-            display: block;
-            margin-top: 10px;
-            border-right: 4px solid #ffd700;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 30px;
-            padding-top: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* الاستجابة للهواتف */
         @media (max-width: 768px) {
-            .top-info { flex-direction: column; text-align: center; gap: 5px; }
-            header { height: auto; padding: 15px; flex-direction: column; gap: 15px; position: relative; }
-            nav ul { gap: 10px; }
-            .hero-section { height: 60vh; }
-            .hero-content h1 { font-size: 1.8rem; }
             .service-container, .service-container.reverse { flex-direction: column !important; text-align: center; }
-            .service-text { text-align: center; }
+            header { height: auto; flex-direction: column; padding: 15px; gap: 10px; }
         }
+        /* --- 🌟 تحسينات فنية وجمالية للهواتف 🌟 --- */
+@media (max-width: 768px) {
+    /* 1. الهيدر: إضافة انحناء سفلي وتأثير زجاجي */
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 0 0 25px 25px; /* انحناء جميل في أسفل الهيدر */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* تحسين شكل الروابط لتشبه الأزرار الصغيرة */
+    nav ul li a {
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 15px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* 2. قسم البطولة (Hero): تحسين تباين النص */
+    .hero-section {
+        height: 45vh;
+        margin: 10px;
+        border-radius: 20px; /* جعل الخلفية بداخل إطار منحني */
+        overflow: hidden;
+    }
+
+    .hero-content {
+        padding: 20px;
+        width: 90%;
+        backdrop-filter: blur(15px); /* زيادة تأثير الضباب الزجاجي */
+    }
+
+    /* 3. أقسام الخدمات: إضافة إطارات ناعمة وتباعد احترافي */
+    .services-section {
+        padding: 40px 15px;
+        margin: 15px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* ظل خفيف جداً */
+    }
+
+    .service-container {
+        gap: 25px;
+    }
+
+    .service-text h2 {
+        font-size: 1.4rem;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    /* خط صغير تحت العنوان لجمالية أكثر */
+    .service-text h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        width: 50%;
+        height: 3px;
+        background: var(--secondary-color);
+        border-radius: 10px;
+    }
+
+    /* 4. قسم الأخبار: لمسة "البطاقات العائمة" */
+    #news-page {
+        padding: 20px 15px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .news-card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* ظل ناعم وعميق */
+        transition: transform 0.3s ease;
+    }
+    
+    /* تأثير بسيط عند ضغط المستخدم بإصبعه على الخبر */
+    .news-card:active {
+        transform: scale(0.98);
+    }
+
+    .news-img-container {
+        height: 200px !important; /* تقليل حجم الصورة لتوفير مساحة */
+    }
+
+    /* 5. الفوتر: لمسة عصرية */
+    footer {
+        border-radius: 30px 30px 0 0;
+        padding: 40px 20px 20px;
+    }
+
+    .bank-account {
+        font-size: 0.85rem;
+        border-right: 5px solid var(--accent-color);
+        background: rgba(255,255,255,0.05);
+    }
+
+    /* تحسين شريط المعلومات العلوي */
+    .top-info {
+        border-radius: 0 0 15px 15px;
+        margin: 0 10px;
+        text-align: center;
+        font-size: 11px;
+    }
+}
     </style>
 </head>
 <body>
 
     <div class="top-info">
         <div><i class="fas fa-envelope"></i> union.tanfalit1@gmail.com | <i class="fas fa-phone"></i> 0666438411</div>
-        <div>اتصل بنا</div>
+        <div>اتحاد تانفاليت لجمعيات أوكنز</div>
     </div>
 
     <header>
         <div class="logo-section">
             <img src="laarbi-bg.jpg" alt="Logo" class="logo-img">
-            <span style="font-weight: bold; font-size: 1.1rem;">اتحاد تانفاليت</span>
+            <span style="font-weight: bold;">اتحاد تانفاليت لجمعيات اوكنز</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="news.html">الأخبار</a></li>
+                <li><a onclick="showSection('home')">الرئيسية</a></li>
+                <li><a onclick="showSection('news')">الأخبار</a></li>
             </ul>
-            <a href="https://www.facebook.com/share/18cRXv98Pj/" class="fb-button" target="_blank">فيسبوك</a>
         </nav>
+        <a href="https://www.facebook.com/share/18cRXv98Pj/" class="fb-button" target="_blank">فيسبوك</a>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>اتحاد تانفاليت لجمعيات أوكنز</h1>
-            <p>
-                نعمل بروح الفريق لتعزيز التضامن وتسهيل سبل الحياة والتعليم لجميع أبناء المنطقة، وتوحيد الجهود من أجل تنمية شاملة.
-            </p>
-        </div>
-    </section>
+    <div id="main-home">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>اتحاد تانفاليت لجمعيات أوكنز</h1>
+                <p>نحن اتحاد يجمع جمعيات منطقة أوكنز، نهدف إلى توحيد الجهود من أجل تنمية الساكنة المحلية وتطوير البنيات التحتية والخدمات الاجتماعية. نعمل بروح الفريق لتعزيز التضامن وتسهيل سبل الحياة والتعليم لجميع أبناء المنطقة.</p>
+            </div>
+        </section>
 
-    <section class="services-section">
-        <div class="service-container">
-            <div class="service-text">
-                <h2>النقل المدرسي</h2>
-                <p>نسعى لتأمين وصول أبنائنا وبناتنا إلى مقاعد الدراسة بأمان عبر أسطول نقل مدرسي متطور يغطي مختلف الدواوير.</p>
+        <section class="services-section">
+            <div class="service-container">
+                <div class="service-text"><h2>النقل المدرسي</h2><p>تأمين وصول أبنائنا وبناتنا إلى مقاعد الدراسة بأمان.</p></div>
+                <div class="service-image"><img src="bus.jpeg"></div>
             </div>
-            <div class="service-image">
-                <img src="bus.jpeg" alt="النقل المدرسي">
-            </div>
-        </div>
-    </section>
+        </section>
+        
 
     <section class="services-section">
         <div class="service-container reverse">
@@ -283,47 +283,70 @@
             </div>
         </div>
     </section>
-    <section class="services-section">
-        <div class="service-container reverse"> 
-            <div class="service-text">
-                <h2>توفير التدريب</h2>
-                <p>
-                    يقدم الاتحاد برامج تدريبية متخصصة لتعزيز مهارات الأفراد العاملين في الجمعيات وتمكينهم من أداء مهامهم بكفاءة عالية، مما يساهم في تطوير العمل الجمعوي بالمنطقة.
-                </p>
+
+        <section class="services-section">
+            <div class="service-container reverse">
+                <div class="service-text"><h2>توفير التدريب</h2><p>برامج تدريبية لتعزيز مهارات الفاعلين الجمعويين.</p></div>
+                <div class="service-image"><img src="tadarib.jpeg"></div>
             </div>
-            <div class="service-image">
-                <img src="tadarib.jpeg" alt="توفير التدريب للجمعيات">
-            </div>
+        </section>
+        
         </div>
-    
+
+    <div id="news-page">
+        <h2 style="text-align: center; color: var(--primary-color);">آخر المستجدات والأخبار</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div style="background:#eee; height:200px; display:flex; align-items:center; justify-content:center;">
+                    <img src="aytbaha.jpeg" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.innerHTML='[صورة اللقاء]'">
+                </div>
+                <div class="news-body">
+                    <span class="news-badge">أرض أشتوكن</span>
+                    <h3 class="news-title">أرض أشتوكن: حوار تشاوري حول إشكالات العقار</h3>
+                    <p class="news-text">نظمت الشبكة الأمازيغية واتحاد تانفاليت لقاءً حول الأراضي القبلية والسلالية لبلورة مذكرة ترافعية قانونية.</p>
+                    <small><i class="fa fa-calendar"></i> 31 يناير 2026</small>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div style="background:#eee; height:200px; display:flex; align-items:center; justify-content:center;">
+                    <img src="bnini.jpeg" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.innerHTML='[صورة الاحتفالية]'">
+                </div>
+                <div class="news-body">
+                    <span class="news-badge">إيض يناير</span>
+                    <h3 class="news-title">احتفاء برأس السنة الأمازيغية وتكريم المقاوم الحاج بنيني</h3>
+                    <p class="news-text">عقد الاتحاد دورته الرابعة تحت شعار "إثبات الملكية مدخل للتنمية" مع الاحتفاء بالذاكرة الوطنية.</p>
+                    <small><i class="fa fa-calendar"></i> 14 يناير 2026</small>
+                </div>
+            </article>
+        </div>
+    </div>
+
     <footer class="main-footer">
         <div class="footer-content">
+            <div class="footer-section"><h3>تواصل معنا 0666438411</h3><p>union.tanfalit1@gmail.com</p></div>
             <div class="footer-section">
-                <h3>تواصل معنا</h3>
-                <p><i class="fas fa-envelope"></i> union.tanfalit1@gmail.com</p>
-                <p><i class="fas fa-phone"></i> 0666438411</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>المقر الرئيسي</h3>
-                <p>جماعة أوكنز - قيادة تنالت - إقليم شتوكة آيت باها</p>
-                <div class="bank-account">
-                    <strong>الحساب البنكي (RIB):</strong><br>
-                    350 810 0000000010810542 12<br>
-                    <small>وكالة البريد بنك</small>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3>عن الاتحاد</h3>
-                <p>نعمل معاً من أجل تنمية مستدامة للمنطقة وتعزيز روح التضامن المجتمعي في دواوير أوكنز.</p>
+                <h3>جماعة اوكنز-قيادة تنالت-اقليم شتوكة ايت باها</h3>
+                <div class="bank-account"><strong>RIB:</strong> 350 810 0000000010810542 12</div>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 جميع الحقوق محفوظة - اتحاد تانفاليت لجمعيات أوكنز</p>
-        </div>
+        <p>&copy; 2026 اتحاد تانفاليت لجمعيات أوكنز</p>
     </footer>
 
+    <script>
+        function showSection(section) {
+            const home = document.getElementById('main-home');
+            const news = document.getElementById('news-page');
+
+            if (section === 'news') {
+                home.style.display = 'none';
+                news.style.display = 'block';
+            } else {
+                home.style.display = 'block';
+                news.style.display = 'none';
+            }
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 </html>
