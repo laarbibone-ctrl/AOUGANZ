@@ -9,6 +9,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        /* --- تنسيق فيديوهات الصفحة الرئيسية --- */
+.home-video-intro {
+    background: #fff;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.video-container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    width: 10%;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.main-video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* فيديو بجانب فيديو في الكمبيوتر */
+    gap: 25px;
+}
+
+.main-video-item {
+    background: #f9f9f9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.video-frame video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.video-desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.video-desc h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* تحسين الهاتف */
+@media (max-width: 768px) {
+    .main-video-grid {
+        grid-template-columns: 1fr; /* فيديو واحد في السطر في الهاتف */
+    }
+    
+    .home-video-intro {
+        padding: 30px 15px;
+        margin: 10px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
         :root {
             --primary-color: #0d4a6b;
             --secondary-color: #1a7196;
@@ -206,6 +287,36 @@
                 <p>نحن اتحاد يجمع جمعيات منطقة أوكنز، نهدف إلى توحيد الجهود من أجل تنمية الساكنة المحلية وتطوير البنيات التحتية والخدمات الاجتماعية. نعمل بروح الفريق لتعزيز التضامن وتسهيل سبل الحياة والتعليم لجميع أبناء المنطقة.</p>
             </div>
         </section>
+        <section class="home-video-intro">
+    <div class="video-container-main">
+        <h2 class="section-title">حول اتحاد تانفاليت لجمعيات اوكنز </h2>
+        
+        <div class="main-video-grid">
+            <div class="main-video-item">
+                <div class="video-frame">
+                    <video controls poster="thumb1.jpg">
+                        <source src="vidio2.mp4" type="video/mp4">
+                        متصفحك لا يدعم الفيديو.
+                    </video>
+                </div>
+                <div class="video-desc">
+                    <h3>🤝✨ من فكرة بسيطة إلى اتحاد قوي… هكذا وُلد اتحاد تانفاليت لخدمة التنمية والعمل المشترك بجماعة أوكنز 🌿💚</h3>
+                </div>
+            </div>
+
+            <div class="main-video-item">
+                <div class="video-frame">
+                    <video controls poster="thumb2.jpg">
+                        <source src="vidio1.mp4" type="video/mp4">
+                        متصفحك لا يدعم الفيديو.
+                    </video>
+                </div>
+           <div class="video-desc">
+                    <h3>🤝 اتحاد تانفاليت لجمعيات أوكنز… قوة العمل المشترك من أجل التنمية 🌿✨</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="services-section">
             <div class="service-container">
