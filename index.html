@@ -256,6 +256,129 @@
         text-align: center;
         font-size: 11px;
     }
+    /* --- 🌟 كود إضافي لتحسين المظهر الجمالي (ضعه في النهاية) 🌟 --- */
+
+/* 1. تحسين شريط المعلومات العلوي (Top Info) */
+.top-info {
+    border-radius: 0 0 15px 15px; /* انحناء بسيط ورقيق في الأسفل */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* ظل خفيف لفصله عن الهيدر */
+    padding: 10px 50px; /* زيادة التباعد لراحة العين */
+    font-size: 13px;
+    letter-spacing: 0.5px; /* تباعد بسيط بين الحروف */
+}
+
+/* 2. تحسين شريط التنقل الرئيسي (Header) */
+header {
+    border-radius: 0 0 30px 30px; /* انحناء فخم وواضح في الأسفل */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* ظل عميق يعطي بُعداً */
+    transition: 0.3s; /* تأثير ناعم عند التحميل */
+}
+
+/* تحويل الروابط (الرئيسية/الأخبار) لأزرار "كبسولة" لمسية */
+nav ul li a {
+    background: rgba(255, 255, 255, 0.08); /* خلفية شبه شفافة وخفيفة */
+    padding: 10px 20px !important; /* زيادة المساحة للضغط */
+    border-radius: 50px; /* زوايا دائرية بالكامل */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* إطار رقيق */
+    transition: 0.3s ease; /* تأثير ناعم عند التأشير (Hover) */
+    font-size: 0.95rem;
+}
+
+/* تأثير عند التأشير (Hover) على الأزرار */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* تفتيح الخلفية */
+    transform: translateY(-2px); /* ارتفاع بسيط للأعلى */
+    color: #ffd700 !important; /* تغيير اللون للذهبي */
+}
+
+/* تحسين زر فيسبوك ليكون أكثر بروزاً */
+.fb-button {
+    background: #1877f2; /* لون فيسبوك الرسمي */
+    border: none !important;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3); /* ظل أزرق متوهج */
+}
+
+.fb-button:hover {
+    background: #166fe5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(24, 119, 242, 0.4);
+}
+
+/* 3. جعل الصورة مع الكتابة جميلة في المقدمة (Hero) */
+.hero-section::before {
+    /* تغيير التعتيم الأسود الثقيل لتدرج فني ناعم يبرز النص */
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%) !important;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.3); /* خلفية زجاجية مظلمة قليلاً لزيادة التباين */
+    backdrop-filter: blur(10px); /* تأثير الضبابية الزجاجي الفخم */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px; /* زوايا منحنية وناعمة */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* إطار رقيق جداً */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* ظل عميق وفخم للبطاقة الزجاجية */
+    padding: 60px 40px; /* تباعد داخلي مريح */
+}
+
+/* تحسين النص ليكون مقروءاً وجميلاً فوق الصورة */
+.hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.3); /* ظل للنص لزيادة الوضوح والعمق */
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+    color: #f1f1f1; /* لون أبيض مائل للرمادي لتقليل إجهاد العين */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    line-height: 1.8;
+}
+
+/* 4. تحسينات إضافية للهاتف (Mobile Styling) */
+@media (max-width: 768px) {
+    .top-info {
+        border-radius: 0 0 10px 10px;
+        padding: 5px 15px;
+        font-size: 11px;
+    }
+
+    header {
+        border-radius: 0 0 20px 20px;
+        padding: 20px 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px !important;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        height: auto;
+        min-height: 400px; /* ضمان ارتفاع كافٍ للنص */
+        padding: 40px 10px;
+        margin: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        padding: 30px 15px;
+        width: 90%;
+        background: rgba(0, 0, 0, 0.4); /* تعتيم الخلفية قليلاً لإبراز النص */
+        backdrop-filter: blur(8px);
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
 }
     </style>
 </head>
